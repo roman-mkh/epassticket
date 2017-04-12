@@ -1,0 +1,39 @@
+{ 
+    "_id": "PUBI0406",
+    
+    "beginAt":  ISODate("2016-06-04T19:00:00.000Z"),
+    "endAt":    ISODate("2016-06-04T22:00:00.000Z"),
+    
+    "lc" : {
+      "de" : {
+        "performance" : {
+          "title": "ART Recital",
+          "subtitle": "Andrei Pushkarev - Vibraphon"
+        },
+                
+        "location": {      
+          "place": "Residenz Au Lac\nBiel",
+          "address": "Aarbergstrasse 54,\n2501 Biel",
+          "tel": "032 328 29 30",
+          "mapUrl": "https://www.google.com.au/maps/place/Aarbergstrasse+54,+2503+Biel%2FBienne,+Switzerland/@47.1298676,7.240202,16z/data=!4m2!3m1!1s0x478e195a8b8793f1:0x7357ddec17b6a6c6"
+        }
+         
+      },
+      
+      "fr" : {
+        "performance" : {
+          "title": "ART Recital",
+          "subtitle": "Andrei Pushkarev - vibraphone"
+        },  
+        
+        "location": {      
+          "place": "Residenz Au Lac\nBienne",
+          "address": "Rue d'Aarberg 54,\n2501 Bienne",
+          "tel": "032 328 29 30",
+          "mapUrl": "https://www.google.com.au/maps/place/Aarbergstrasse+54,+2503+Biel%2FBienne,+Switzerland/@47.1298676,7.240202,16z/data=!4m2!3m1!1s0x478e195a8b8793f1:0x7357ddec17b6a6c6"
+        }
+      }
+    },
+        
+    "ver": 0.7
+}

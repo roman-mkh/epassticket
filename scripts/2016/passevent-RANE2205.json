@@ -1,0 +1,38 @@
+{ 
+    "_id": "RANE2205",
+    
+    "beginAt":  ISODate("2016-05-22T17:00:00.000Z"),
+    "endAt":    ISODate("2016-05-22T20:00:00.000Z"),
+    
+    "lc" : {
+      "de" : {
+        "performance" : {
+          "title": "ART Ensemble",
+          "subtitle": "Rastrelli Cello Quartett"
+        },
+                
+        "location": {      
+          "place": "Blanche Eglise\nLa Neuveville",
+          "address": "Chemin de la Combe,\n2520 La Neuveville",
+          "tel": "032 751 10 35",
+          "mapUrl": "https://www.google.com/maps/place/La+Blanche+%C3%A9glise/@47.0641535,7.0963879,17z/data=!4m7!1m4!3m3!1s0x478e0ff3028e9b01:0xb3306c61e4d16e7e!2sRama+Watch+Sa!3b1!3m1!1s0x0000000000000000:0x236d41365591fc4e?hl=de"
+        }         
+      },
+      
+      "fr" : {
+        "performance" : {
+          "title": "ART Ensemble",
+          "subtitle": "Rastrelli Cello Quartett"
+        },  
+        
+        "location": {      
+          "place": "Blanche Eglise\nLa Neuveville",
+          "address": "Chemin de la Combe,\n2520 La Neuveville",
+          "tel": "032 751 10 35",
+          "mapUrl": "https://www.google.com/maps/place/La+Blanche+%C3%A9glise/@47.0641535,7.0963879,17z/data=!4m7!1m4!3m3!1s0x478e0ff3028e9b01:0xb3306c61e4d16e7e!2sRama+Watch+Sa!3b1!3m1!1s0x0000000000000000:0x236d41365591fc4e?hl=fr"
+        }
+      }
+    },
+        
+    "ver": 0.7
+}

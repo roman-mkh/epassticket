@@ -1,0 +1,8 @@
+.bg-none {
+	background-color: transparent;
+}
+
+img.qrcode {
+  width: 205px;	
+  height: 205px;
+}

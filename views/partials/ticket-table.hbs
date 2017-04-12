@@ -1,0 +1,28 @@
+{{debug this}}
+
+<table id="user" class="table table-bordered table-striped" style="clear: both">
+	<tbody>
+		<tr>
+			<td>Date</td>
+			<td>{{formatDate eventInfo.beginAt day="numeric" month="long" year="numeric"}} {{formatTime eventInfo.beginAt hour="numeric"
+				minute="numeric"}}</td>
+		</tr>
+		<tr>
+			<td>Place</td>
+			<td><a href="https://www.google.ch/maps/place/{{relevantText}}/@{{eventInfo.location.longitude}},{{eventInfo.location.latitude}}z"
+				target="_blank">{{eventInfo.place}}</a></td>
+		</tr>
+		<tr>
+			<td>Tickets</td>
+			<td>{{restNumberOfTickets}}</td>
+		</tr>
+		<tr>
+			<td>Total price</td>
+			<td>{{formatNumber totalPrice.value "TicketCurrency"}} <small>(payment: <code>{{paymentTx}})</code></small></td>
+		</tr>
+		<tr>
+			<td>Valid until</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>

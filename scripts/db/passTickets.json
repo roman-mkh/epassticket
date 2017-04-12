@@ -1,0 +1,51 @@
+{
+    "_id": "JEBA1106-1433887275934",
+    "passEventId": "JEBA1106",
+    "totalPrice": {
+        "value": 40,
+        "currency": "CHF"
+    },
+    "numberOfTickets": 55,
+    "createdAt": {
+        "$date": "2015-06-09T22:01:15.934Z"
+    },
+    "ver": 1.04,
+    "paymentTx": "paypal-9Y622350R5379620Y",
+    "devalues": [
+        {
+            "at": {
+                "$date": "2015-06-09T22:37:24.281Z"
+            },
+            "numberOfTickets": 1,
+            "user": "<anonimus>"
+        },
+        {
+            "at": {
+                "$date": "2015-06-09T22:37:37.843Z"
+            },
+            "numberOfTickets": 1,
+            "user": "<anonimus>"
+        },
+        {
+            "at": {
+                "$date": "2015-06-09T22:41:26.430Z"
+            },
+            "numberOfTickets": 1,
+            "user": "<anonimus>"
+        },
+        {
+            "at": {
+                "$date": "2015-06-09T22:42:29.739Z"
+            },
+            "numberOfTickets": 1,
+            "user": "<anonimus>"
+        },
+        {
+            "at": {
+                "$date": "2015-06-09T22:44:14.800Z"
+            },
+            "numberOfTickets": 1,
+            "user": "admin"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{ 
+    "_id": "KIMO0306",
+    
+    "beginAt":  ISODate("2016-06-03T20:00:00.000Z"),
+    "endAt":    ISODate("2016-06-03T23:00:00.000Z"),
+    
+    "lc" : {
+      "de" : {
+        "performance" : {
+          "title": "ART Future",
+          "subtitle": "Young World Talents"
+        },
+                
+        "location": {      
+          "place": "Salle de Chantemerle\nMoutier",
+          "address": "Chemin de Chantemerle 2,\n2740 Moutier",
+          "tel": "032 494 13 33",
+          "mapUrl": "https://www.google.ch/maps/place/Chantemerle+2,+2740+Moutier/@47.2765808,7.3600902,16.32z/data=!4m2!3m1!1s0x4791e0a71d0f3bff:0x9ae873c79c0fb72e?hl=de"
+        }
+         
+      },
+      
+      "fr" : {
+        "performance" : {
+          "title": "ART Future",
+          "subtitle": "Young World Talents"
+        },  
+        
+        "location": {      
+          "place": "Salle de Chantemerle\nMoutier",
+          "address": "Chemin de Chantemerle 2,\n2740 Moutier",
+          "tel": "032 494 13 33",
+          "mapUrl": "https://www.google.ch/maps/place/Chantemerle+2,+2740+Moutier/@47.2765808,7.3600902,16.32z/data=!4m2!3m1!1s0x4791e0a71d0f3bff:0x9ae873c79c0fb72e?hl=fr"
+        }
+      }
+    },
+        
+    "ver": 0.7
+}

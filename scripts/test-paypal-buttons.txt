@@ -1,0 +1,21 @@
+----------------------------------
+CERF1905
+Eintrittskarte ARTrecital "C.Enderle/R.Friedemann"
+----------------------------------
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="*">
+<table>
+<tr><td><input type="hidden" name="on0" value="Preise">Preise</td></tr><tr><td><select name="os0">
+  <option value="Erwachsene">Erwachsene 35.00 CHF</option>
+  <option value="Studenten und Lehrlinge ab 18 Jahren">Studenten und Lehrlinge ab 18 Jahren 20.00 CHF</option>
+  <option value="Schüler, Studenten und Lehrlinge zwischen 12 und 18 Jahren">Schüler, Studenten und Lehrlinge zwischen 12 und 18 Jahren 10.00 CHF</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="CHF">
+<input type="image" src="https://www.sandbox.paypal.com/de_DE/CH/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+----------------------------------
+----------------------------------

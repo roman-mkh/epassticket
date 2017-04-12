@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" ng-app="PassApp">
+<head>
+<meta charset="utf-8">
+<title>My HTML File</title>
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="/css/app.css">
+<script src="/angular/angular.js"></script>
+<script src="/angular-resource/angular-resource.js"></script>
+<script src="/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="/functional.js/functional.js"></script>
+<script src="/qrcode-generator/js/qrcode.js"></script>
+<script src="/qrcode-generator/js/qrcode_UTF8.js"></script>
+<script src="/angular-qrcode/qrcode.js"></script>
+<script
+	src="https://www.paypalobjects.com/js/external/paypal-button.min.js"></script>
+<script src="/js/app.js"></script>
+</head>
+<body ng-controller="PassTemplateCtrl">
+	<section class="container page-header">
+		<h1>
+			Ticket Issue System <small>Festival ArtDialog</small>
+		</h1>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">New Ticket Data</h3>
+			</div>
+			<div class="panel-body">
+				<form ng-submit="orderPass()">
+					<div class="form-group">
+						<label for="fldPassTemplate">Pass Template</label> <select
+							id="fldPassTemplate" ng-model="newPass.templateId"
+							ng-options="passTemplate.id as passTemplate.name for passTemplate in passTemplates"
+							class="form-control" required="required">
+							<option value="">-- select pass template --</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="fldVisitorFirstName">Name</label> <input
+							id="fldVisitorFirstName" type="text" name="name"
+							ng-model="newPass.visitor.name" class="form-control"
+							required="required" />
+					</div>
+					<div class="form-group">
+						<label for="fldNumberOfTickets">Pass Template</label> <select
+							id="fldNumberOfTickets" ng-model="newPass.numberOfTickets"
+							class="form-control" required="required">
+							<option ng-repeat="num in [1,2,3,4,5]" value="{{num}}">{{num}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="fldBackSideMessage">Back Side Message</label>
+						<textarea id="fldBackSideMessage"
+							ng-model="newPass.backSideMessage" class="form-control" rows="1"></textarea>
+					</div>
+					<button type="submit" class="btn btn-default">Issue
+						Ticket(s)</button>
+				</form>
+			</div>
+			<!-- FIXME update dyn -->
+			<div class="panel-footer text-right">
+			<!-- https://www.sandbox.paypal.com/cgi-bin/webscr -->
+				<form action="/paypal"
+					method="post">
+					<input value="www.sandbox" name="env" type="hidden">
+					<input type="hidden" name="cmd" value="_xclick"> 
+					<input type="hidden" name="hosted_button_id" value="6H477T9WCCL4U">
+					<input type="hidden" name="business" value="roman.mukhin-facilitator@gmail.com">					
+          <input type="hidden" name="amount" value="20">
+          <input type="hidden" name="item_name" value="Festival ArtDialog Ticket">
+          <input type="hidden" name="quantity" value="{{newPass.numberOfTickets}}">
+          <input type="hidden" name="currency_code" value="CHF">
+          <input type="hidden" name="return" value="http://localhost:5000/validate-ticket/OREYA0206-1430694108482">
+          <input type="hidden" name="cancel_return" value="http://localhost:5000/">
+          <input type="hidden" name="rm" value="1">
+          
+          <input type="hidden" name="lc" value="CH">
+          <input type="hidden" name="image_url" value="http://festival.artdialog.ch/assets/img/logo.png">
+          
+          
+                     				
+					<input type="image"
+						src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif"
+						border="0" name="submit"
+						alt="PayPal - The safer, easier way to pay online!"> <img
+						alt="" border="0"
+						src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif"
+						width="1" height="1">
+				</form>
+				
+				<script data-env="sandbox" data-currency="CHF" data-amount="40"
+					data-quantity="2" data-name="Ticket" data-button="buynow"
+					src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=roman.mukhin-facilitator@gmail.com"
+					async="async"></script>
+
+			</div>
+		</div>
+	</section>
+	<!-- make like cards gallery - use bootstrap thumbnails -->
+	<section class="container page-header" ng-If="issuedPasses.length > 0">
+		<h1>
+			Issued Tickets
+			<!-- add button to clear (bootstrap table) -->
+		</h1>
+		<!-- FIXME left side ticket info, rightside QR-Code(s), add button email it -->
+		<div class="panel panel-default" class="animate-repeat"
+			ng-repeat="pass in issuedPasses">
+			<div class="panel-heading">
+				<h3>Serial Number <code>{{pass.getSerialNumber()}}</code></h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-8 col-xs-8">
+						<ul class="list-group">
+							<li class="list-group-item">{{pass.getPerformance()}}</li>
+							<li class="list-group-item">{{pass.getVisitorName()}}</li>
+              <li class="list-group-item">{{pass.getPerformanceDate()}}</li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-xs-4 text-center">
+						<div class="list-group">
+							<a href="{{pass.getDownloadUrl()}}" class="list-group-item">
+								<h4 class="list-group-item-heading">Download</h4>
+
+								<p class="list-group-item-text">
+									<qrcode data="{{pass.getDownloadUrl()}}" download version="10"
+										error-correction-level="M" size="150"></qrcode>
+								</p>
+								<p>{{pass.getId()}}</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

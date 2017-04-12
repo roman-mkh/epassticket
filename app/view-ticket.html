@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" ng-app="PassApp">
+<head>
+<meta charset="utf-8">
+<title>My HTML File</title>
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="/css/app.css">
+<script src="/angular/angular.js"></script>
+<script src="/angular-resource/angular-resource.js"></script>
+<script src="/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="/functional.js/functional.js"></script>
+<script src="/qrcode-generator/js/qrcode.js"></script>
+<script src="/qrcode-generator/js/qrcode_UTF8.js"></script>
+<script src="/angular-qrcode/qrcode.js"></script>
+<script src="/js/app.js"></script>
+</head>
+<body ng-controller="PassValidationCtrl">
+	<section class="container page-header">
+		<h1>
+			Ticket Validation System <small>Festival ArtDialog</small>
+		</h1>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h2 class="panel-title">
+					Ticket Data
+					<code>{{pass.getId()}}</code>
+				</h2>
+				<!-- expired? expiration-date,  -->
+			</div>
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table id="user" class="table table-bordered table-striped"
+						style="clear: both">
+						<tbody>
+							<tr>
+								<td width="35%">Visitor name</td>
+								<td width="65%">{{pass.getName()}}</td>
+							</tr>
+							<tr>
+								<td>Place</td>
+								<td>{{pass.getPlace()}}</td>
+							</tr>
+							<tr>
+								<td>Number of Tickets</td>
+								<td>{{pass.getNumberOfTickets()}}<span ng-show="pass.getNumberOfTickets()!=pass.getRestNumberOfTickets()">(already used: {{pass.getNumberOfTickets()-pass.getRestNumberOfTickets()}})</span></td>
+							</tr>
+					</table>
+					<!-- add devaluation date-time/user -->
+					<div ng-show="pass">
+						<button class="btn btn-primary btn-lg" ng-class="{'btn-success': pass.isValid(), 'btn-danger': !pass.isValid()}" type="button" ng-disabled="!pass.isValid()">
+							Devalue Ticket <span class="badge">{{pass.getRestNumberOfTickets()}}</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

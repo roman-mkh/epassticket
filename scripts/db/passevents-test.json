@@ -1,0 +1,84 @@
+[
+ { 
+    "_id": "CERF1905",
+    
+    "beginAt":  ISODate("2016-05-19T19:00:00.000Z"),
+    "endAt":    ISODate("2016-05-19T22:00:00.000Z"),
+    
+    "lc" : {
+      "de" : {
+        "performance" : {
+          "title": "LEJEUNEBALLET.CH",
+          "subtitle": "Genève"
+        },
+                
+        "location": {      
+          "place": "Residenz Au Lac\nBiel",
+          "address": "Aarbergstrasse 54,\n2501 Biel/Bienne",
+          "tel": "032 328 29 30",
+          "mapUrl": "https://www.google.com.au/maps/place/Aarbergstrasse+54,+2503+Biel%2FBienne,+Switzerland/@47.1298676,7.240202,16z/data=!4m2!3m1!1s0x478e195a8b8793f1:0x7357ddec17b6a6c6"
+        }
+         
+      },
+      
+      "fr" : {
+        "performance" : {
+          "title": "LEJEUNEBALLET.CH",
+          "subtitle": "Genève"
+        },  
+        
+        "location": {      
+          "place": "Residenz Au Lac\nBienne",
+          "address": "Rue d'Aarberg 54,\n2501 Biel/Bienne",
+          "tel": "032 328 29 30",
+          "mapUrl": "https://www.google.com.au/maps/place/Aarbergstrasse+54,+2503+Biel%2FBienne,+Switzerland/@47.1298676,7.240202,16z/data=!4m2!3m1!1s0x478e195a8b8793f1:0x7357ddec17b6a6c6"
+        }
+      }
+    },
+        
+    "ver": 0.7
+  },
+
+
+  { 
+    "_id": "DMSU0606",
+    
+    "beginAt":  ISODate("2015-06-06T19:00:00.000Z"),
+    "endAt":    ISODate("2015-06-06T22:00:00.000Z"),
+    
+    "lc" : {
+      "de" : {
+        "performance" : {
+          "title": "Dmytro Sukhovienko",
+          "subtitle": "Klavier"
+        },
+                
+        "location": {      
+          "place": "Logensaal Biel",
+          "address": "Jurastrasse 40,\n2502 Biel/Bienne",
+          "tel": "032 341 99 19",
+          "mapUrl": "https://www.google.ch/maps/place/Logensaal/@47.140101,7.250448,15z/data=!4m2!3m1!1s0x0:0xa5ddd743568e00ae?sa=X&amp;ei=LJNbVf2ANObGygOK5IDoCg&amp;ved=0CH8Q_BIwDg"
+        }
+         
+      },
+      
+      "fr" : {
+        "performance" : {
+          "title": "Dmytro Sukhovienko",
+          "subtitle": "piano"
+        },  
+        
+        "location": {      
+          "place": "Bienne, salle de la Loge",
+          "address": "rue du Jura 40,\n2502 Biel/Bienne",
+          "tel": "032 341 99 19",
+          "mapUrl": "https://www.google.ch/maps/place/Logensaal/@47.140101,7.250448,15z/data=!4m2!3m1!1s0x0:0xa5ddd743568e00ae?sa=X&amp;ei=LJNbVf2ANObGygOK5IDoCg&amp;ved=0CH8Q_BIwDg"
+        }
+      }
+    },
+        
+    "ver": 0.7
+  },
+
+   
+]

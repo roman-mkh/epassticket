@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ticket verification</title>
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  {{print @exphbs.data }}
+  {{> includes/navbar this }}
+
+	{{#ifTestSystem}}
+	<section class="container-fluid">
+	<div class="alert alert-warning alert-dismissible" role="alert">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  <strong>Warning!</strong> You are using the <strong>TEST</strong> System
+	</div>
+	</section>
+	{{/ifTestSystem}}
+
+  {{{ body }}}
+</body>
+  <script src="/jquery/dist/jquery.min.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+</html>

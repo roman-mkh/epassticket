@@ -1,0 +1,93 @@
+<!-- section class="container page-header" -->
+{{#with pass}}
+<section class="container-fluid">
+  <div class="panel panel-info">
+	  <div class="panel-heading">
+	    <h1 class="panel-title">{{eventInfo.performance.title}}</h1>
+	    {{eventInfo.performance.subtitle}}
+	  </div>
+	
+		<table class="table table-bordered table-striped table-responsive">
+			<tbody>
+        <tr>
+          <td>eTicket No.</td>
+          <td>{{id}}</td>
+        </tr>
+			  <tr>
+			    <td>Date</td>
+			    <td>{{formatDate eventInfo.beginAt day="numeric" month="long" year="numeric"}} {{formatTime eventInfo.beginAt hour="numeric"
+			      minute="numeric"}}</td>
+			  </tr>
+        <tr class="{{#if isExpired}}danger{{/if}}">
+          <td>Valid until</td>
+          <td>{{formatDate eventInfo.endAt day="numeric" month="long" year="numeric"}} {{formatTime eventInfo.beginAt hour="numeric" minute="numeric"}}</td>
+        </tr>
+			  <tr>
+			    <td>Place</td>
+			    {{#with eventInfo.location}}
+			    <td><a href="{{{mapUrl}}}" target="_blank">{{place}}</a></td>
+			    {{/with }}
+			  </tr>
+			  <tr>
+			    <td>Tickets</td>
+			    <td><strong>{{restNumberOfTickets}}</strong> / {{numberOfTickets}}</td>
+			  </tr>
+			  <tr>
+			    <td>Total price</td>
+			    <td>{{formatNumber totalPrice.value "TicketCurrency"}}</td>
+			  </tr>
+        <tr>
+          <td>Payment</td>
+          <td>{{paymentTx}}</td>
+        </tr>
+			</tbody>
+		</table>
+  </div>
+  
+              {{#if ../locals/authenticated}}
+            <div class="text-center">
+                <!--  fixme disble on click
+onsubmit="alert($('from > button[type=&qout;submit&qout;]'));return true;"
+                 -->
+              <form id="devalue" method="POST" onsubmit="$('form > button[type=submit]').prop('disabled', true); return true;">
+                <button type="submit" class="btn btn-primary btn-lg btn-success" {{#unless isValid}} disabled="disabled" {{/unless}} >
+                  Devalue <strong>1</strong> Ticket <span class="badge">{{restNumberOfTickets}}</span>
+                </button>
+              </form>
+            </div>
+            {{/if}}
+  
+  
+</section>
+
+{{#if devalues}}
+<section class="container" style="margin-top:3%;">
+  <h2 class="h3">Devalues</h2>
+  <div class="panel panel-default">
+    <table class="table table-bordered table-striped table-responsive">
+      <tbody>
+        <tr>
+          <th>Date</th>
+          <th>Authority</th>
+          <th>Number of tickets</th>
+        </tr>
+        {{#each devalues}}
+        <tr>
+          <td>{{formatDate at day="numeric" month="numeric" year="numeric"}} {{formatTime at hour="numeric" minute="numeric"}} <small>({{formatRelative at}})</small></td>
+          <td>{{user}}</td>
+          <td>{{numberOfTickets}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</section>
+{{/if}}
+				<!-- 
+				<div class="col-sm-4">
+					<div class="well bg-none text-center">
+						<img class="qrcode" src="{{qrCodeUrl}}" /> <strong>{{id}}</strong>
+					</div>
+				</div>
+				 -->
+{{/with}}

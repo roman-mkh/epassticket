@@ -1,0 +1,38 @@
+{
+  "name": "pass.artdialog.ch",
+  "version": "0.0.1",
+  "description": "A Node.js app using Express 4",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "basic-auth": "^1.0.0",
+    "body-parser": "^1.12.3",
+    "debug": "^2.1.3",
+    "express": "^4.9.x",
+    "express-handlebars": "^2.0.1",
+    "functional.js": "^0.7.1",
+    "handlebars-intl": "^1.1.1",
+    "intl": "^1.0.1",
+    "intl-locales-supported": "^1.0.0",
+    "kew": "^0.7.0",
+    "mongodb": "^2.0.31",
+    "node-rest-client": "^1.5.1",
+    "nodemailer": "^1.3.4",
+    "nodemailer-express-handlebars": "1.0.0",
+    "nodemailer-smtp-transport": "^2.0.0",
+    "qr-image": "^3.1.0",
+    "request": "^2.55.0",
+    "verror": "^1.6.0",
+    "winston": "^2.1.1"
+  },
+  "engines": {
+    "node": "^0.12.2"
+  },
+  "keywords": [
+    "paypal"
+  ],
+  "license": "PRIVAT",
+  "devDependencies": {}
+}

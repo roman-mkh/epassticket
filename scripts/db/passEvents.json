@@ -1,0 +1,41 @@
+[
+ { 
+    "_id": "ADOR1206",
+    
+    "beginAt":  ISODate("2015-06-12T19:30:00.000Z"),
+    "endAt":    ISODate("2015-06-12T22:00:00.000Z"),
+    
+    "lc" : {
+      "de" : {
+        "performance" : {
+          "title": "ArtDialog Orchestra",
+          "subtitle": "CONCERT – PROMENADE"
+        },
+                
+        "location": {      
+          "place": "Blanche Eglise\nLa Neuveville",
+          "address": "Chemin de la Combe,\n2520 La Neuveville",
+          "tel": "",
+          "mapUrl": "https://www.google.ch/maps/place/La+Blanche+%C3%A9glise/@47.06434,7.096965,17z/data=!3m1!4b1!4m2!3m1!1s0x478e0ff2c91d8049:0x236d41365591fc4e"
+        }
+         
+      },
+      
+      "fr" : {
+        "performance" : {
+          "title": "ArtDialog Orchestra",
+          "subtitle": "CONCERT – PROMENADE"
+        },  
+        
+        "location": {      
+          "place": "Blanche Eglise\nLa Neuveville",
+          "address": "Chemin de la Combe,\n2520 La Neuveville",
+          "tel": "",
+          "mapUrl": "https://www.google.ch/maps/place/La+Blanche+%C3%A9glise/@47.06434,7.096965,17z/data=!3m1!4b1!4m2!3m1!1s0x478e0ff2c91d8049:0x236d41365591fc4e"
+        }
+      }
+    },
+        
+    "ver": 0.7
+  }
+]

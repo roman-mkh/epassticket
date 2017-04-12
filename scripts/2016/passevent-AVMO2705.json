@@ -1,0 +1,38 @@
+{ 
+    "_id": "AVMO2705",
+    
+    "beginAt":  ISODate("2016-05-27T20:30:00.000Z"),
+    "endAt":    ISODate("2016-05-27T23:30:00.000Z"),
+    
+    "lc" : {
+      "de" : {
+        "performance" : {
+          "title": "ART Ensemble",
+          "subtitle": "Streichquartett Aviv"
+        },
+                
+        "location": {      
+          "place": "Cave St-Germain\nMoutier",
+          "address": "Rue Saint-Germain 5,\n2740 Moutier",
+          "tel": "032 493 16 07",
+          "mapUrl": "https://www.google.ch/maps/place/Rue+Saint-Germain+5,+2740+Moutier,+Schweiz/@47.2801391,7.368211,17z/data=!3m1!4b1!4m2!3m1!1s0x4791de1b45cf9e1f:0xe63eab3906e17a63?hl=de"
+        }         
+      },
+      
+      "fr" : {
+        "performance" : {
+          "title": "ART Ensemble",
+          "subtitle": "Quatuor à cordes AVIV"
+        },  
+        
+        "location": {      
+          "place": "Cave St-Germain\nMoutier",
+          "address": "Rue Saint-Germain 5,\n2740 Moutier",
+          "tel": "032 493 16 07",
+          "mapUrl": "https://www.google.ch/maps/place/Rue+Saint-Germain+5,+2740+Moutier,+Schweiz/@47.2801391,7.368211,17z/data=!3m1!4b1!4m2!3m1!1s0x4791de1b45cf9e1f:0xe63eab3906e17a63?hl=fr"
+        }
+      }
+    },
+        
+    "ver": 0.7
+}

@@ -1,0 +1,14 @@
+{
+  "name": "epassticket",
+  "description": "eTicktes management",
+  "keywords": ["eTickte"],
+  "env": {
+    "SYSTEM_TYPE" : "DEV",
+    "AUTH_USERS": "[{"name":"master","pass":"master"},{"name":"foo","pass":"bar"}]",
+    "PAYPAL_BASEURL": "https://www.sandbox.paypal.com",
+
+    "WALLET_API_LOGIN": "*@*.com",
+    "WALLET_API_PASSWORD":  "*-*-*-*-*",
+    "DEBUG": "ept:paypal:ipn ept:network ept:network:pass"
+  }
+}
